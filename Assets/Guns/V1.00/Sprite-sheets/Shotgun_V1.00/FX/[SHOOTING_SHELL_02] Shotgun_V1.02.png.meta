@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 7e8e3577067f922419749c5ba2dbd1b7
+guid: f7deb60fc045c054485b833b39baf2ca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3015177024873187116
-    second: arm_0
+      213: 4598468221607479807
+    second: '[SHOOTING_SHELL_02] Shotgun_V1.02_0'
+  - first:
+      213: -7277067440224395940
+    second: '[SHOOTING_SHELL_02] Shotgun_V1.02_1'
+  - first:
+      213: -6311071290666193368
+    second: '[SHOOTING_SHELL_02] Shotgun_V1.02_2'
+  - first:
+      213: 5083283842858162574
+    second: '[SHOOTING_SHELL_02] Shotgun_V1.02_3'
+  - first:
+      213: 6741710673731636854
+    second: '[SHOOTING_SHELL_02] Shotgun_V1.02_4'
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 28
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: arm_0
+      name: '[SHOOTING_SHELL_02] Shotgun_V1.02_0'
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 21
-        height: 33
+        x: 202
+        y: 15
+        width: 644
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c274c7e678f08d920800000000000000
-      internalID: 3015177024873187116
+      spriteID: ff906dbdb7a01df30800000000000000
+      internalID: 4598468221607479807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[SHOOTING_SHELL_02] Shotgun_V1.02_1'
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 18
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5d1ddaf7b9a20b90800000000000000
+      internalID: -7277067440224395940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[SHOOTING_SHELL_02] Shotgun_V1.02_2'
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 16
+        width: 165
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82eecaf39129a68a0800000000000000
+      internalID: -6311071290666193368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[SHOOTING_SHELL_02] Shotgun_V1.02_3'
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 7
+        width: 323
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e891b0209b37b8640800000000000000
+      internalID: 5083283842858162574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '[SHOOTING_SHELL_02] Shotgun_V1.02_4'
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 0
+        width: 165
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67ecb3e732e5f8d50800000000000000
+      internalID: 6741710673731636854
       vertices: []
       indices: 
       edges: []
@@ -147,8 +247,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      arm_0: 3015177024873187116
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
