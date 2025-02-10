@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
         movementInput.x = Input.GetAxisRaw("Horizontal");
         movementInput.y = Input.GetAxisRaw("Vertical");
 
+        movementInput.Normalize();
         
         playerRigidbody.linearVelocity = movementInput * movementSpeed;
 
