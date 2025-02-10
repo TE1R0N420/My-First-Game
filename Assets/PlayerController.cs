@@ -15,10 +15,14 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 movementInput;
 
+    private Animator playerAnimator;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         mainCamera = Camera.main;
+
+        playerAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -51,6 +55,16 @@ public class PlayerController : MonoBehaviour
             transform.localScale = Vector3.one;
             weaponsArm.localScale = Vector3.one;
         }
+
+        if (movementInput != Vector2.zero)
+        {
+            playerAnimator.SetBool ("isWalking", true);
+        }
+        else
+        {
+            playerAnimator.SetBool("isWalking", false);
+        }
+
 
     }
 }
