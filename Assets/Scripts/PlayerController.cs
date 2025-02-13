@@ -17,6 +17,11 @@ public class PlayerController : MonoBehaviour
 
     private Animator playerAnimator;
 
+
+    [SerializeField] GameObject bullet;
+    [SerializeField] Transform firePoint;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -66,6 +71,10 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetBool("isWalking", false);
         }
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            Instantiate(bullet, firePoint.position, firePoint.rotation);
+        }
 
     }
 }
