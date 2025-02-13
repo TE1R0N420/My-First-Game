@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject bullet;
     [SerializeField] Transform firePoint;
 
+    [SerializeField] float timeBetweenShots;
+    private float shotCounter = 0;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -75,6 +78,19 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(bullet, firePoint.position, firePoint.rotation);
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            shotCounter -= Time.deltaTime;
+
+            if (shotCounter <= 0)
+            {
+                Instantiate(bullet, firePoint.position, firePoint.rotation);
+                shotCounter = timeBetweenShots;
+            }
+        }
+
+
 
     }
 }
