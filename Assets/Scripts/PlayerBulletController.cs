@@ -6,6 +6,7 @@ public class PlayerBulletController : MonoBehaviour
 {
 
     [SerializeField] float bulletSpeed = 5f;
+    [SerializeField] GameObject bulletImpactEffect;
 
     private Rigidbody2D bulletRigidbody;
 
@@ -24,6 +25,7 @@ public class PlayerBulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+       Instantiate(bulletImpactEffect.transform, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }
