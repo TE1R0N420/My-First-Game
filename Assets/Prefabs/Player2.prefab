@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 7154496612556849043}
   - component: {fileID: 5925352513170969996}
   - component: {fileID: 2910928614865847199}
-  m_Layer: 0
+  - component: {fileID: 2377898691386189772}
+  m_Layer: 6
   m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,8 +54,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRigidbody: {fileID: 7154496612556849043}
-  movementSpeed: 5
+  movementSpeed: 10
   weaponsArm: {fileID: 6296511492751069525}
+  bullet: {fileID: 6626674834552048593, guid: a1dc0cd89b7ff764fae01bfe886c8abb, type: 3}
+  firePoint: {fileID: 1656381787662919574}
+  timeBetweenShots: 0.1
 --- !u!70 &5816985871301967900
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -196,6 +200,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2377898691386189772
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105241968652459475}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.011507034, y: 0.20136827}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6785715, y: 2.357143}
+    newSize: {x: 1.6785715, y: 2.357143}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.72351074, y: 2.2420754}
+  m_EdgeRadius: 0
 --- !u!1 &976561451081875263
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4387146712794955528}
   - component: {fileID: 1678345691883143570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6296511492751069525}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Weapons Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8752032674107516405}
   - component: {fileID: 2258013217981419888}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,8 +462,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1656381787662919574}
-  m_Layer: 0
-  m_Name: FirePoint
+  m_Layer: 6
+  m_Name: Fire Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -444,7 +494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1111160507848065748}
   - component: {fileID: 3919100093340715222}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 425896681987973655}
   - component: {fileID: 596660877671575794}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ShotGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
