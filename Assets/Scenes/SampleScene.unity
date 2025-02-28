@@ -180,7 +180,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &460232672
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -239,8 +239,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 552f71e5a66322944835438a486f490c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 5
-  playerChaseRange: 3.15
+  enemySpeed: 3.42
+  playerChaseRange: 2.85
+  playerKeepChaseRange: 5.28
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,6 +473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1087061434}
   - component: {fileID: 1087061435}
+  - component: {fileID: 1087061436}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -549,6 +551,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1087061436
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087061433}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b17e4a48896dc114385c233e8a7bd1a4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1931812859
 GameObject:
   m_ObjectHideFlags: 0
