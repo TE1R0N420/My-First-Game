@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 460232671}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 3.42
+  enemyHealth: 100
   playerChaseRange: 2.85
   playerKeepChaseRange: 5.28
 --- !u!1 &519420028
