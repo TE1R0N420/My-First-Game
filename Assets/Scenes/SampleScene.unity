@@ -243,6 +243,7 @@ MonoBehaviour:
   enemyHealth: 100
   playerChaseRange: 2.85
   playerKeepChaseRange: 5.28
+  deathSplatter: {fileID: 3256309679513375924, guid: 28eee140a8545dd46924c2d0c7de5058, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

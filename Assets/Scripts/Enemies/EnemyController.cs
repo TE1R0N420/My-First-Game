@@ -13,6 +13,9 @@ public class EnemyController : MonoBehaviour
     [SerializeField] float playerChaseRange;
     [SerializeField] float playerKeepChaseRange;
 
+
+    [SerializeField] GameObject deathSplatter;
+
     bool isChasing;
 
     private Vector3 directionToMoveIn;
@@ -78,6 +81,7 @@ public class EnemyController : MonoBehaviour
         enemyHealth -= damageTaken;
         if (enemyHealth <= 0) 
         {
+            Instantiate(deathSplatter, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }

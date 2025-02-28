@@ -1,0 +1,240 @@
+fileFormatVersion: 2
+guid: 665138250c51ed14cb07f573d00c9f89
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4738937231328622949
+    second: splattersplash_3_0
+  - first:
+      213: -6123020768261446792
+    second: splattersplash_3_1
+  - first:
+      213: -3272661812133958342
+    second: splattersplash_3_2
+  - first:
+      213: 8637870259488678849
+    second: splattersplash_3_3
+  - first:
+      213: 2139764743035685681
+    second: splattersplash_3_4
+  - first:
+      213: -2229294022088715084
+    second: splattersplash_3_5
+  - first:
+      213: 2747559637573730241
+    second: splattersplash_3_6
+  - first:
+      213: -4073442851581814763
+    second: splattersplash_3_7
+  - first:
+      213: -8320233725493470504
+    second: splattersplash_3_8
+  - first:
+      213: -3206582170020481127
+    second: splattersplash_3_9
+  - first:
+      213: -3046615566583273173
+    second: splattersplash_3_10
+  - first:
+      213: -3050430336074903105
+    second: splattersplash_3_11
+  - first:
+      213: 7011800808804992884
+    second: splattersplash_3_12
+  - first:
+      213: -4746473290959321487
+    second: splattersplash_3_13
+  - first:
+      213: 5543845818091535124
+    second: splattersplash_3_14
+  - first:
+      213: -3872285690670698595
+    second: splattersplash_3_15
+  - first:
+      213: -3477566030094960281
+    second: splattersplash_3_16
+  - first:
+      213: -6738982384180903104
+    second: splattersplash_3_17
+  - first:
+      213: -5783499662887849785
+    second: splattersplash_3_18
+  - first:
+      213: 3684648075584529905
+    second: splattersplash_3_19
+  - first:
+      213: 6050026894530416431
+    second: splattersplash_3_20
+  - first:
+      213: 1262547467588359939
+    second: splattersplash_3_21
+  - first:
+      213: -1537487694184513366
+    second: splattersplash_3_22
+  - first:
+      213: 4519544699045623919
+    second: splattersplash_3_23
+  - first:
+      213: 4971239843455851488
+    second: splattersplash_3_24
+  - first:
+      213: -7883607395872114085
+    second: splattersplash_3_25
+  - first:
+      213: 3806602924011103506
+    second: splattersplash_3_26
+  - first:
+      213: 4840874307612028700
+    second: splattersplash_3_27
+  - first:
+      213: -1002362591260953773
+    second: splattersplash_3_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: splattersplash_3_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 152
+        width: 640
+        height: 434
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3de4c1db6b2592d0800000000000000
+      internalID: -3272661812133958342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 04e56c00ed2d7864d8873c62e579ff22
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      splattersplash_3_2: -3272661812133958342
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
