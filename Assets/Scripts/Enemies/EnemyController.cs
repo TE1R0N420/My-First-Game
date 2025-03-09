@@ -15,6 +15,7 @@ public class EnemyController : MonoBehaviour
 
 
     [SerializeField] GameObject deathSplatter;
+    [SerializeField] GameObject damageEffect;
 
     bool isChasing;
 
@@ -79,6 +80,9 @@ public class EnemyController : MonoBehaviour
     public void DamageEnemy(int damageTaken)
     {
         enemyHealth -= damageTaken;
+
+        Instantiate(damageEffect, transform.position, transform.rotation);
+
         if (enemyHealth <= 0) 
         {
             Instantiate(deathSplatter, transform.position, transform.rotation);
