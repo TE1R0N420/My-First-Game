@@ -45,14 +45,14 @@ TagManager:
   - name: Background
     uniqueID: 3677132887
     locked: 0
+  - name: Bullet
+    uniqueID: 291645405
+    locked: 0
   - name: Enemies
     uniqueID: 1385546385
     locked: 0
   - name: Player
     uniqueID: 367880627
-    locked: 0
-  - name: Bullet
-    uniqueID: 291645405
     locked: 0
   - name: Weapons
     uniqueID: 3974128941
