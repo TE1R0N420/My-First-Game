@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7509928491318566377}
   - component: {fileID: 6100943442912779235}
   - component: {fileID: -3803954210700485636}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Skeleton Flying Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96ebcb61293d8b04f872d38378c15425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 3
+  bulletSpeed: 5
 --- !u!50 &-3803954210700485636
 Rigidbody2D:
   serializedVersion: 5
