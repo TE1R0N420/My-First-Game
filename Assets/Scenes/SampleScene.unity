@@ -246,9 +246,11 @@ MonoBehaviour:
   playerKeepChaseRange: 5.28
   deathSplatter: {fileID: 3256309679513375924, guid: 28eee140a8545dd46924c2d0c7de5058, type: 3}
   damageEffect: {fileID: 8015567303666578383, guid: 45342369d8091774ab5a00a2213002db, type: 3}
+  isChasing: 0
   meleeAttacker: 0
   enemyProjectile: {fileID: 7638335846010826111, guid: 20333a14f9137554db8b33229899167e, type: 3}
   firePosition: {fileID: 494517957}
+  shootingRange: 5.17
   timeBetweenShots: 1
 --- !u!1 &494517956
 GameObject:
@@ -898,10 +900,6 @@ PrefabInstance:
     - target: {fileID: 105241968652459475, guid: 7bd8008a8b8399340b2c94a88ac14014, type: 3}
       propertyPath: m_Name
       value: DOOM Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1918105353920380077, guid: 7bd8008a8b8399340b2c94a88ac14014, type: 3}
-      propertyPath: isWeaponAutomatic
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5325492455572626651, guid: 7bd8008a8b8399340b2c94a88ac14014, type: 3}
       propertyPath: m_LocalPosition.x

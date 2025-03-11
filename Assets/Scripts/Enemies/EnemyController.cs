@@ -17,7 +17,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] GameObject deathSplatter;
     [SerializeField] GameObject damageEffect;
 
-    bool isChasing;
+    public bool isChasing;
 
     private Vector3 directionToMoveIn;
 
@@ -30,7 +30,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] bool meleeAttacker;
     [SerializeField] GameObject enemyProjectile;
     [SerializeField] Transform firePosition;
-
+    [SerializeField] float shootingRange;
     [SerializeField] float timeBetweenShots;
     private bool readyToShoot;
 
@@ -82,7 +82,7 @@ public class EnemyController : MonoBehaviour
             transform.localScale = Vector3.one;
         }
 
-        if(!meleeAttacker && readyToShoot)
+        if(!meleeAttacker && readyToShoot && Vector3.Distance(playerToChase.transform.position, transform.position) <shootingRange)
         {
             readyToShoot = false;
             StartCoroutine(FireEnemyProjectiles());
@@ -119,6 +119,9 @@ public class EnemyController : MonoBehaviour
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, playerKeepChaseRange);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, shootingRange);
     }
 
 
