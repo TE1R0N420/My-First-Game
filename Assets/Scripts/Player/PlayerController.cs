@@ -40,10 +40,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         PlayerMoving();
-
         PlayerPointingGunAtMouse();
         PlayerAnimating();
-
         PlayerShooting();
 
     }
