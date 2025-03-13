@@ -5,12 +5,20 @@ using System.Collections.Generic;
 public class RoomManager : MonoBehaviour
 {
     [SerializeField] GameObject[] doorsToClose;
-    [SerializeField] bool closeDoorOnPlayerEnter;
+    [SerializeField] bool closeDoorsOnPlayerEnter, openDoorsWhenEnemiesDie;
+
+    [SerializeField] List<Collider2D> enemies = new List<Collider2D>();
+
+    private Collider2D roomCollider;
+    private ContactFilter2D contactFilter2D;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        roomCollider = GetComponent<Collider2D>();
+        contactFilter2D.SetLayerMask(LayerMask.GetMask("Enemies"));
+
+        roomCollider.Overlap(contactFilter2D, enemies);
     }
 
     // Update is called once per frame
@@ -23,7 +31,7 @@ public class RoomManager : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (closeDoorOnPlayerEnter)
+            if (closeDoorsOnPlayerEnter)
             {
                 foreach (GameObject door in doorsToClose)
                 {

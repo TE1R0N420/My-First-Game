@@ -135,7 +135,7 @@ Transform:
   m_GameObject: {fileID: 6371256218439146167}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.73, y: 0.68, z: -10.007108}
+  m_LocalPosition: {x: 1.7, y: 0.68, z: -10.007108}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -199,8 +199,8 @@ MonoBehaviour:
   meleeAttacker: 0
   enemyProjectile: {fileID: 7638335846010826111, guid: 20333a14f9137554db8b33229899167e, type: 3}
   firePosition: {fileID: 3584148385488194605}
-  shootingRange: 5.17
-  timeBetweenShots: 1
+  shootingRange: 6.6
+  timeBetweenShots: 0.1
 --- !u!61 &3695497791832503118
 BoxCollider2D:
   m_ObjectHideFlags: 0
