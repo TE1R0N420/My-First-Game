@@ -200,7 +200,7 @@ MonoBehaviour:
   enemyProjectile: {fileID: 7638335846010826111, guid: 20333a14f9137554db8b33229899167e, type: 3}
   firePosition: {fileID: 3584148385488194605}
   shootingRange: 6.6
-  timeBetweenShots: 0.1
+  timeBetweenShots: 2
 --- !u!61 &3695497791832503118
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -26,7 +26,11 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] bool isWeaponAutomatic;
 
-    
+    //Dashing
+    private float currentMovementSpeed;
+    private bool canDash;
+
+    [SerializeField] float dashSpeed = 20f, dashLength = 0.5f, dashCooldown = 1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,6 +38,10 @@ public class PlayerController : MonoBehaviour
         mainCamera = Camera.main;
 
         playerAnimator = GetComponent<Animator>();
+
+        currentMovementSpeed = movementSpeed;
+
+        canDash = true;
     }
 
     // Update is called once per frame
@@ -43,6 +51,30 @@ public class PlayerController : MonoBehaviour
         PlayerPointingGunAtMouse();
         PlayerAnimating();
         PlayerShooting();
+
+        if(Input.GetKeyDown(KeyCode.Space) && canDash)
+        {
+            currentMovementSpeed = dashSpeed;
+            canDash = false;
+
+            StartCoroutine(DashCooldownCounter());
+            StartCoroutine(DashLengthCounter());
+        }
+
+        IEnumerator DashCooldownCounter()
+        {
+            yield return new WaitForSeconds(dashCooldown);
+            canDash = true;
+        }
+
+        IEnumerator DashLengthCounter()
+        {
+            yield return new WaitForSeconds(dashCooldown);
+
+            currentMovementSpeed = movementSpeed;
+        }
+
+
 
     }
 
@@ -109,6 +141,6 @@ public class PlayerController : MonoBehaviour
 
         movementInput.Normalize();
 
-        playerRigidbody.linearVelocity = movementInput * movementSpeed;
+        playerRigidbody.linearVelocity = movementInput * currentMovementSpeed;
     }
 }
