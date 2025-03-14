@@ -728,7 +728,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xeonsheet_2
+      name: D2
       rect:
         serializedVersion: 2
         x: 66
@@ -750,7 +750,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xeonsheet_3
+      name: D3
       rect:
         serializedVersion: 2
         x: 131
@@ -772,7 +772,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xeonsheet_4
+      name: D4
       rect:
         serializedVersion: 2
         x: 186
@@ -794,7 +794,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xeonsheet_5
+      name: D5
       rect:
         serializedVersion: 2
         x: 243
@@ -816,7 +816,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xeonsheet_9
+      name: D6
       rect:
         serializedVersion: 2
         x: 318
@@ -838,7 +838,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: xeonsheet_10
+      name: D7
       rect:
         serializedVersion: 2
         x: 384
@@ -859,6 +859,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: D1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 512
+        width: 43
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54ad58fe8f50324bacd3ea2c4614f78
+      internalID: -99360495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -873,13 +895,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      xeonsheet_10: -1719399347
-      xeonsheet_2: -873138204
-      xeonsheet_3: -1008113958
-      xeonsheet_4: 138475023
-      xeonsheet_5: 2127126576
+      D1: -99360495
+      D2: -873138204
+      D3: -1008113958
+      D4: 138475023
+      D5: 2127126576
+      D6: -629009135
+      D7: -1719399347
       xeonsheet_64: 321327432
-      xeonsheet_9: -629009135
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

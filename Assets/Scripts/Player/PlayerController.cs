@@ -57,6 +57,10 @@ public class PlayerController : MonoBehaviour
             currentMovementSpeed = dashSpeed;
             canDash = false;
 
+
+            playerAnimator.SetTrigger("Dash");
+
+
             StartCoroutine(DashCooldownCounter());
             StartCoroutine(DashLengthCounter());
         }
@@ -117,6 +121,9 @@ public class PlayerController : MonoBehaviour
 
     private void PlayerShooting()
     {
+        if (!canDash) { return; }
+        
+        
         if (Input.GetMouseButtonDown(0) && !isWeaponAutomatic)
         {
             Instantiate(bullet, firePoint.position, firePoint.rotation);
