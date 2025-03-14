@@ -10,7 +10,7 @@ public class LevelExit : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            SceneManager.LoadScene(LevelToLoad);
+            StartCoroutine(LevelManager.instance.LoadingNextLevel(LevelToLoad));
         }
     }
 }
