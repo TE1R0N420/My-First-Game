@@ -150,4 +150,16 @@ public class PlayerController : MonoBehaviour
 
         playerRigidbody.linearVelocity = movementInput * currentMovementSpeed;
     }
+
+    public bool PlayerIsDashing()
+    {
+        if (currentMovementSpeed == dashSpeed)
+            return true;
+        else
+            return false;
+    }
+
+
+
+
 }
