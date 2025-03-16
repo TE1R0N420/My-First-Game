@@ -507,12 +507,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: breakable pots (yellow)_31
+      name: p1
       rect:
         serializedVersion: 2
         x: 38
         y: 4
-        width: 6
+        width: 23
         height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -529,56 +529,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: breakable pots (yellow)_32
+      name: p2
       rect:
         serializedVersion: 2
-        x: 51
-        y: 4
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 057df920455171fa0800000000000000
-      internalID: -5830167742042351792
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: breakable pots (yellow)_33
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 2
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a4cb130bef7a272d0800000000000000
-      internalID: -3282376466080089014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: breakable pots (yellow)_34
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 4
-        width: 9
+        x: 70
+        y: 3
+        width: 22
         height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -595,34 +551,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: breakable pots (yellow)_35
+      name: p3
       rect:
         serializedVersion: 2
-        x: 100
-        y: 1
-        width: 10
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e3fa3acd1e56cd6e0800000000000000
-      internalID: -1811460929366020290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: breakable pots (yellow)_36
-      rect:
-        serializedVersion: 2
-        x: 114
-        y: 3
-        width: 11
+        x: 101
+        y: 2
+        width: 23
         height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -673,18 +607,18 @@ TextureImporter:
       breakable pots (yellow)_28: -2485675134133928629
       breakable pots (yellow)_29: -5270263998630042980
       breakable pots (yellow)_3: 7466261745280370062
-      breakable pots (yellow)_31: -8920052713648112322
       breakable pots (yellow)_32: -5830167742042351792
       breakable pots (yellow)_33: -3282376466080089014
-      breakable pots (yellow)_34: 506280561391852356
       breakable pots (yellow)_35: -1811460929366020290
-      breakable pots (yellow)_36: 8258517961701856370
       breakable pots (yellow)_4: -5332645148069240859
       breakable pots (yellow)_5: -7968591909903639489
       breakable pots (yellow)_6: 439785532205730440
       breakable pots (yellow)_7: -3037228286513643633
       breakable pots (yellow)_8: 7005145258581352672
       breakable pots (yellow)_9: -8856588918492623259
+      p1: -8920052713648112322
+      p2: 506280561391852356
+      p3: 8258517961701856370
       w1: -5865729529489245295
       w2: -6789805206252412067
       w3: -825595005525496415
