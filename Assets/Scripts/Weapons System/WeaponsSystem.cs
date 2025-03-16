@@ -30,21 +30,19 @@ public class WeaponsSystem : MonoBehaviour
     {
         if (GetComponentInParent<PlayerController>().PlayerIsDashing()) { return; }
 
-
-        if (Input.GetMouseButtonDown(0) && !isWeaponAutomatic)
-        {
-            Instantiate(bullet, firePoint.position, firePoint.rotation);
-        }
-
-        if (Input.GetMouseButton(0) && isWeaponAutomatic)
+        if (shotCounter > 0)
         {
             shotCounter -= Time.deltaTime;
+        }
 
-            if (shotCounter <= 0)
+        else
+        {
+            if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))
             {
                 Instantiate(bullet, firePoint.position, firePoint.rotation);
                 shotCounter = timeBetweenShots;
             }
         }
+
     }
 }
