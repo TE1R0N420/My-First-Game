@@ -18,13 +18,7 @@ public class PlayerController : MonoBehaviour
     private Animator playerAnimator;
 
 
-    [SerializeField] GameObject bullet;
-    [SerializeField] Transform firePoint;
-
-    [SerializeField] float timeBetweenShots;
-    private float shotCounter = 0;
-
-    [SerializeField] bool isWeaponAutomatic;
+    
 
     //Dashing
     private float currentMovementSpeed;
@@ -50,7 +44,7 @@ public class PlayerController : MonoBehaviour
         PlayerMoving();
         PlayerPointingGunAtMouse();
         PlayerAnimating();
-        PlayerShooting();
+        //PlayerShooting();
 
         if(Input.GetKeyDown(KeyCode.Space) && canDash)
         {
@@ -119,27 +113,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void PlayerShooting()
-    {
-        if (!canDash) { return; }
-        
-        
-        if (Input.GetMouseButtonDown(0) && !isWeaponAutomatic)
-        {
-            Instantiate(bullet, firePoint.position, firePoint.rotation);
-        }
-
-        if (Input.GetMouseButton(0) && isWeaponAutomatic)
-        {
-            shotCounter -= Time.deltaTime;
-
-            if (shotCounter <= 0)
-            {
-                Instantiate(bullet, firePoint.position, firePoint.rotation);
-                shotCounter = timeBetweenShots;
-            }
-        }
-    }
+    
 
     private void PlayerMoving()
     {
@@ -159,7 +133,7 @@ public class PlayerController : MonoBehaviour
             return false;
     }
 
-
+    //public bool isPlayerDashing() { return !canDash; }
 
 
 }

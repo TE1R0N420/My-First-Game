@@ -56,10 +56,9 @@ MonoBehaviour:
   playerRigidbody: {fileID: 7154496612556849043}
   movementSpeed: 10
   weaponsArm: {fileID: 6296511492751069525}
-  bullet: {fileID: 6626674834552048593, guid: a1dc0cd89b7ff764fae01bfe886c8abb, type: 3}
-  firePoint: {fileID: 1656381787662919574}
-  timeBetweenShots: 0.1
-  isWeaponAutomatic: 1
+  dashSpeed: 20
+  dashLength: 0.5
+  dashCooldown: 1
 --- !u!70 &5816985871301967900
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -364,7 +363,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 425896681987973655}
-  - {fileID: 1656381787662919574}
   m_Father: {fileID: 5325492455572626651}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1871674472877651980
@@ -478,12 +476,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2648864481678500793}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.865, y: -0.032, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.255, y: 0.1480003, z: 0.066896066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6296511492751069525}
+  m_Father: {fileID: 425896681987973655}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4176583852393372644
 GameObject:
@@ -582,6 +580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 425896681987973655}
   - component: {fileID: 596660877671575794}
+  - component: {fileID: 2959828387587496048}
   m_Layer: 6
   m_Name: ShotGun
   m_TagString: Untagged
@@ -601,7 +600,8 @@ Transform:
   m_LocalPosition: {x: 0.61, y: -0.18, z: -0.066896066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1656381787662919574}
   m_Father: {fileID: 6296511492751069525}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &596660877671575794
@@ -659,3 +659,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2959828387587496048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7917253577302403555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20dc18c47802c6b44a02f5b96736b141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 6626674834552048593, guid: a1dc0cd89b7ff764fae01bfe886c8abb, type: 3}
+  firePoint: {fileID: 1656381787662919574}
+  timeBetweenShots: 1
+  isWeaponAutomatic: 0
