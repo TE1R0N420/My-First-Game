@@ -26,6 +26,11 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float dashSpeed = 20f, dashLength = 0.5f, dashCooldown = 1f;
 
+    [SerializeField] List<WeaponsSystem> availableWeapons = new List<WeaponsSystem>();
+    private int currentGun;
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -44,20 +49,12 @@ public class PlayerController : MonoBehaviour
         PlayerMoving();
         PlayerPointingGunAtMouse();
         PlayerAnimating();
-        //PlayerShooting();
+        PlayerDashing();
+        SwitchGun();
 
-        if(Input.GetKeyDown(KeyCode.Space) && canDash)
-        {
-            currentMovementSpeed = dashSpeed;
-            canDash = false;
+    }
 
 
-            playerAnimator.SetTrigger("Dash");
-
-
-            StartCoroutine(DashCooldownCounter());
-            StartCoroutine(DashLengthCounter());
-        }
 
         IEnumerator DashCooldownCounter()
         {
@@ -72,9 +69,49 @@ public class PlayerController : MonoBehaviour
             currentMovementSpeed = movementSpeed;
         }
 
+    public void SwitchGun()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (availableWeapons.Count > 0)
+            {
+                currentGun++;
 
+                if (currentGun >= availableWeapons.Count)
+                {
+                    currentGun = 0;
+                }
 
+                foreach(WeaponsSystem weapon in availableWeapons)
+                {
+                    weapon.gameObject.SetActive(false);
+                }
+
+                availableWeapons[currentGun].gameObject.SetActive(true);
+
+            }
+            else
+            {
+                Debug.LogWarning("No Guns available. Pick some Up");
+            }
+        }
     }
+
+        private void PlayerDashing()
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && canDash)
+            {
+                currentMovementSpeed = dashSpeed;
+                canDash = false;
+
+
+                playerAnimator.SetTrigger("Dash");
+
+
+                StartCoroutine(DashCooldownCounter());
+                StartCoroutine(DashLengthCounter());
+            }
+        }
 
     private void PlayerAnimating()
     {
