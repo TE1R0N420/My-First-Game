@@ -135,4 +135,6 @@ MonoBehaviour:
   bullet: {fileID: 4048877437568896391, guid: bf06cd4c1a8ca604cb8ac3127dc7c9a9, type: 3}
   firePoint: {fileID: 72220184176159664}
   timeBetweenShots: 0.3
+  weaponImage: {fileID: -896113644789240630, guid: 167e5f66d315e3746bd1a8d90bee70ff, type: 3}
+  weaponName: Rifle
   isWeaponAutomatic: 0

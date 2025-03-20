@@ -10,6 +10,11 @@ public class WeaponsSystem : MonoBehaviour
     [SerializeField] float timeBetweenShots;
     private float shotCounter = 0;
 
+
+    [SerializeField] Sprite weaponImage;
+    [SerializeField] string weaponName;
+    
+    
     [SerializeField] bool isWeaponAutomatic;
 
 
@@ -45,4 +50,7 @@ public class WeaponsSystem : MonoBehaviour
         }
 
     }
+
+    public Sprite GetWeaponImageUI() { return weaponImage; }
+    public string GetWeaponNameUI() { return weaponName; }
 }

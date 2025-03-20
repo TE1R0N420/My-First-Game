@@ -41,6 +41,9 @@ public class PlayerController : MonoBehaviour
         currentMovementSpeed = movementSpeed;
 
         canDash = true;
+
+        currentGun = 1;
+        SettingWeaponsUI();
     }
 
     // Update is called once per frame
@@ -82,12 +85,14 @@ public class PlayerController : MonoBehaviour
                     currentGun = 0;
                 }
 
-                foreach(WeaponsSystem weapon in availableWeapons)
+                foreach (WeaponsSystem weapon in availableWeapons)
                 {
                     weapon.gameObject.SetActive(false);
                 }
 
                 availableWeapons[currentGun].gameObject.SetActive(true);
+
+                SettingWeaponsUI();
 
             }
             else
@@ -97,7 +102,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-        private void PlayerDashing()
+    private void SettingWeaponsUI()
+    {
+        UIManager.instance.ChangeWeaponUI(
+            availableWeapons[currentGun].GetComponent<WeaponsSystem>().GetWeaponImageUI(),
+            availableWeapons[currentGun].GetComponent<WeaponsSystem>().GetWeaponNameUI()
+            );
+    }
+
+    private void PlayerDashing()
         {
             if (Input.GetKeyDown(KeyCode.Space) && canDash)
             {

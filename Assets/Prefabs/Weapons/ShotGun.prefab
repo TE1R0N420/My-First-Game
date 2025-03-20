@@ -104,6 +104,8 @@ MonoBehaviour:
   bullet: {fileID: 6626674834552048593, guid: a1dc0cd89b7ff764fae01bfe886c8abb, type: 3}
   firePoint: {fileID: 5440055570025546159}
   timeBetweenShots: 1
+  weaponImage: {fileID: -4056352365346963193, guid: 8868adc77218aa043a6acbb6a44d36c5, type: 3}
+  weaponName: Shotgun
   isWeaponAutomatic: 0
 --- !u!1 &8737260302947157376
 GameObject:
