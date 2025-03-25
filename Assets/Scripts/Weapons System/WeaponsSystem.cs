@@ -13,7 +13,10 @@ public class WeaponsSystem : MonoBehaviour
 
     [SerializeField] Sprite weaponImage;
     [SerializeField] string weaponName;
-    
+
+
+    [SerializeField] float weaponShakeIntensity, weaponShakeTime;
+
     
     [SerializeField] bool isWeaponAutomatic;
 
@@ -46,6 +49,8 @@ public class WeaponsSystem : MonoBehaviour
             {
                 Instantiate(bullet, firePoint.position, firePoint.rotation);
                 shotCounter = timeBetweenShots;
+
+                CameraShake.instance.ShakeCamera(weaponShakeIntensity, weaponShakeTime);
             }
         }
 

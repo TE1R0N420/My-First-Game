@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5925352513170969996}
   - component: {fileID: 2910928614865847199}
   - component: {fileID: 2377898691386189772}
+  - component: {fileID: 3268480190338935267}
   m_Layer: 6
   m_Name: Player2
   m_TagString: Player
@@ -250,6 +251,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.72351074, y: 2.2420754}
   m_EdgeRadius: 0
+--- !u!114 &3268480190338935267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105241968652459475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 806e6d7c451ae2d4e8c10831abfc1380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &976561451081875263
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,6 +606,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4888856697357009541, guid: 6a8fb1353495b954bbb74b20949a82a3, type: 3}
+      propertyPath: weaponShakeTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888856697357009541, guid: 6a8fb1353495b954bbb74b20949a82a3, type: 3}
+      propertyPath: weaponShakeIntensity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6922072138282625163, guid: 6a8fb1353495b954bbb74b20949a82a3, type: 3}
       propertyPath: m_Name
       value: Pistol
@@ -669,6 +690,14 @@ PrefabInstance:
     - target: {fileID: 5190616774747884529, guid: 8adb5271c4b5d94409a4c28f495f2d0f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8856983426840762543, guid: 8adb5271c4b5d94409a4c28f495f2d0f, type: 3}
+      propertyPath: weaponShakeTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8856983426840762543, guid: 8adb5271c4b5d94409a4c28f495f2d0f, type: 3}
+      propertyPath: weaponShakeIntensity
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9079502696632332519, guid: 8adb5271c4b5d94409a4c28f495f2d0f, type: 3}
       propertyPath: m_Name
@@ -754,6 +783,14 @@ PrefabInstance:
     - target: {fileID: 6371261984468894766, guid: befdcdecb665f6f41bf2b1d2900d060d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8399565143223320137, guid: befdcdecb665f6f41bf2b1d2900d060d, type: 3}
+      propertyPath: weaponShakeTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8399565143223320137, guid: befdcdecb665f6f41bf2b1d2900d060d, type: 3}
+      propertyPath: weaponShakeIntensity
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
