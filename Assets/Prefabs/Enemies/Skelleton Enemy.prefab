@@ -192,14 +192,14 @@ MonoBehaviour:
   enemySpeed: 3.42
   enemyHealth: 100
   playerChaseRange: 2.85
-  playerKeepChaseRange: 5.28
+  playerKeepChaseRange: 9.92
   deathSplatter: {fileID: 3256309679513375924, guid: 28eee140a8545dd46924c2d0c7de5058, type: 3}
   damageEffect: {fileID: 8015567303666578383, guid: 45342369d8091774ab5a00a2213002db, type: 3}
   isChasing: 0
   meleeAttacker: 0
   enemyProjectile: {fileID: 7638335846010826111, guid: 20333a14f9137554db8b33229899167e, type: 3}
   firePosition: {fileID: 3584148385488194605}
-  shootingRange: 6.6
+  shootingRange: 8
   timeBetweenShots: 2
 --- !u!61 &3695497791832503118
 BoxCollider2D:

@@ -7,6 +7,10 @@ public class EnemyBulletController : MonoBehaviour
 
     [SerializeField] float bulletSpeed;
     private Vector3 playerDirection;
+
+    [SerializeField] int bulletDamageAmount;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,7 +29,7 @@ public class EnemyBulletController : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("The player was hit");
+            collision.GetComponent<PlayerHealthHandler>().DamagePlayer(bulletDamageAmount);
         }
 
         Destroy(gameObject);
