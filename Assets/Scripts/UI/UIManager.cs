@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] Image weaponImage;
     [SerializeField] Text weaponName;
+
+    public Slider healthSlider;
+    public TextMeshProUGUI healthText;
+
 
     private void Awake()
     {
