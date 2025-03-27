@@ -46,6 +46,19 @@ public class PlayerHealthHandler : MonoBehaviour
 
     }
 
+    public void AddHpToPlayer(int healAmount)
+    {
+        currentHealth += healAmount;
+
+        if(currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+
+        UpdatePlayerHealth() ;
+    }
+
+
     public void MakePlayerInvincible()
     {
         isInvincible = true;
