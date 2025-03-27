@@ -119,6 +119,7 @@ public class PlayerController : MonoBehaviour
 
 
                 playerAnimator.SetTrigger("Dash");
+                GetComponent<PlayerHealthHandler>().MakePlayerInvincible();
 
 
                 StartCoroutine(DashCooldownCounter());
