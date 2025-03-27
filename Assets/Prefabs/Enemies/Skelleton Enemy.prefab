@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 552f71e5a66322944835438a486f490c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 3.42
+  enemySpeed: 2.5
   enemyHealth: 100
   playerChaseRange: 2.85
   playerKeepChaseRange: 9.92

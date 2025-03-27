@@ -40,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -119,12 +119,12 @@ TextureImporter:
       name: bloodtrail_4_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 15
-        width: 135
-        height: 101
+        x: 21
+        y: 17
+        width: 146
+        height: 97
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -137,33 +137,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: bloodtrail_4_1
-      rect:
-        serializedVersion: 2
-        x: 155
-        y: 101
-        width: 15
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 20aae66c4269c0fd0800000000000000
-      internalID: -2374357818838963710
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c9f0d7f55eec5634b93ddbd67e2e9253
     internalID: 0
     vertices: []
     indices: 
@@ -172,7 +150,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bloodtrail_4_0: 6755380166065528609
+      bloodtrail_4_1: -2374357818838963710
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

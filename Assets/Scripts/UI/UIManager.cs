@@ -17,6 +17,8 @@ public class UIManager : MonoBehaviour
     public Slider healthSlider;
     public TextMeshProUGUI healthText;
 
+    [SerializeField] GameObject deathScreen;
+
 
     private void Awake()
     {
@@ -35,6 +37,9 @@ public class UIManager : MonoBehaviour
         weaponName.text = gunText;
     }
 
-
+    public void TurnDeathScreenOn()
+    {
+        deathScreen.SetActive(true);
+    }
 
 }
