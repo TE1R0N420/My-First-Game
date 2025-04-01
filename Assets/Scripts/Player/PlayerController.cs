@@ -82,29 +82,34 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (availableWeapons.Count > 0)
+            ActualGunSwitch();
+        }
+    }
+
+    private void ActualGunSwitch()
+    {
+        if (availableWeapons.Count > 0)
+        {
+            currentGun++;
+
+            if (currentGun >= availableWeapons.Count)
             {
-                currentGun++;
-
-                if (currentGun >= availableWeapons.Count)
-                {
-                    currentGun = 0;
-                }
-
-                foreach (WeaponsSystem weapon in availableWeapons)
-                {
-                    weapon.gameObject.SetActive(false);
-                }
-
-                availableWeapons[currentGun].gameObject.SetActive(true);
-
-                SettingWeaponsUI();
-
+                currentGun = 0;
             }
-            else
+
+            foreach (WeaponsSystem weapon in availableWeapons)
             {
-                Debug.LogWarning("No Guns available. Pick some Up");
+                weapon.gameObject.SetActive(false);
             }
+
+            availableWeapons[currentGun].gameObject.SetActive(true);
+
+            SettingWeaponsUI();
+
+        }
+        else
+        {
+            Debug.LogWarning("No Guns available. Pick some Up");
         }
     }
 
@@ -190,6 +195,14 @@ public class PlayerController : MonoBehaviour
             return false;
     }
 
+
+    public void AddToAvailableWeapons(WeaponsSystem weaponToAdd)
+    {
+        availableWeapons.Add(weaponToAdd);
+
+        currentGun = availableWeapons.Count - 2;
+        ActualGunSwitch();
+    }
 
     public List<WeaponsSystem> GetAvailableWeaponsOnPlayer() { return availableWeapons; }
 

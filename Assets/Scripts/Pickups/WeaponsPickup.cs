@@ -25,7 +25,8 @@ public class WeaponsPickup : MonoBehaviour
 
             if (!gunOnPlayer)
             {
-                Instantiate(weapon, collision.GetComponent<PlayerController>().GetWeaponsArm());
+                WeaponsSystem weaponToAdd = Instantiate(weapon, collision.GetComponent<PlayerController>().GetWeaponsArm());
+                collision.GetComponent<PlayerController>().AddToAvailableWeapons(weaponToAdd);
             }
 
             Destroy(gameObject);
