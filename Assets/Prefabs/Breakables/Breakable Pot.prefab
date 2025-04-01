@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3725132238914064852}
   - component: {fileID: 6082433099533855283}
   - component: {fileID: 3060263388176438140}
+  - component: {fileID: 8772649281964626803}
   m_Layer: 0
   m_Name: Breakable Pot
   m_TagString: Untagged
@@ -202,3 +203,19 @@ MonoBehaviour:
   - {fileID: 3991716770495301497, guid: 3dd0810d420ca234580031a4121bf406, type: 3}
   - {fileID: 42298598319549286, guid: 954430f73afb3b240b12783f7eaf1820, type: 3}
   - {fileID: 3357919678801036794, guid: 3977269a2d21bb44498dbc4a3d4aa7e8, type: 3}
+--- !u!114 &8772649281964626803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5569334477776944921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3273112479a72945b230de27390fdfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropsItems: 1
+  itemsToDrop:
+  - {fileID: 0}
+  itemDropChance: 1

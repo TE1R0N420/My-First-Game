@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 6743382458831615349}
   - component: {fileID: 3695497791832503118}
   - component: {fileID: 719700331089335924}
+  - component: {fileID: 4559609852886282116}
   m_Layer: 8
   m_Name: Skelleton Enemy
   m_TagString: Enemy
@@ -274,3 +275,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &4559609852886282116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8085143438221828472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3273112479a72945b230de27390fdfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropsItems: 1
+  itemsToDrop:
+  - {fileID: 0}
+  itemDropChance: 1
