@@ -42,7 +42,13 @@ public class PlayerController : MonoBehaviour
 
         canDash = true;
 
-        currentGun = 1;
+        for(int i = 0; i < availableWeapons.Count; i++)
+        {
+            if (availableWeapons[i].gameObject.activeInHierarchy)
+            {
+                currentGun = i;
+            }
+        }
         SettingWeaponsUI();
     }
 
@@ -106,7 +112,7 @@ public class PlayerController : MonoBehaviour
     {
         UIManager.instance.ChangeWeaponUI(
             availableWeapons[currentGun].GetComponent<WeaponsSystem>().GetWeaponImageUI(),
-            availableWeapons[currentGun].GetComponent<WeaponsSystem>().GetWeaponNameUI()
+            availableWeapons[currentGun].GetComponent<WeaponsSystem>().GetWeaponName()
             );
     }
 
@@ -183,6 +189,11 @@ public class PlayerController : MonoBehaviour
         else
             return false;
     }
+
+
+    public List<WeaponsSystem> GetAvailableWeaponsOnPlayer() { return availableWeapons; }
+
+    public Transform GetWeaponsArm() { return weaponsArm; }
 
     //public bool isPlayerDashing() { return !canDash; }
 

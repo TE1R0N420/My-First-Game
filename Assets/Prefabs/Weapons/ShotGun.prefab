@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3485205485628280794}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.61, y: -0.18, z: -0.066896066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -106,6 +106,8 @@ MonoBehaviour:
   timeBetweenShots: 1
   weaponImage: {fileID: -4056352365346963193, guid: 8868adc77218aa043a6acbb6a44d36c5, type: 3}
   weaponName: Shotgun
+  weaponShakeIntensity: 0
+  weaponShakeTime: 0
   isWeaponAutomatic: 0
 --- !u!1 &8737260302947157376
 GameObject:

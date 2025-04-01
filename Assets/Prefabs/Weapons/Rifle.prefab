@@ -137,4 +137,6 @@ MonoBehaviour:
   timeBetweenShots: 0.3
   weaponImage: {fileID: -896113644789240630, guid: 167e5f66d315e3746bd1a8d90bee70ff, type: 3}
   weaponName: Rifle
+  weaponShakeIntensity: 0
+  weaponShakeTime: 0
   isWeaponAutomatic: 0
