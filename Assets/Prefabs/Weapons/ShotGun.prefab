@@ -109,6 +109,7 @@ MonoBehaviour:
   weaponShakeIntensity: 0
   weaponShakeTime: 0
   isWeaponAutomatic: 0
+  sfxNumberToPlay: 9
 --- !u!1 &8737260302947157376
 GameObject:
   m_ObjectHideFlags: 0

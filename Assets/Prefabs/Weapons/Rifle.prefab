@@ -140,3 +140,4 @@ MonoBehaviour:
   weaponShakeIntensity: 0
   weaponShakeTime: 0
   isWeaponAutomatic: 0
+  sfxNumberToPlay: 7

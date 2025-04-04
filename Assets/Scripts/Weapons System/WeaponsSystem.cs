@@ -20,7 +20,7 @@ public class WeaponsSystem : MonoBehaviour
     
     [SerializeField] bool isWeaponAutomatic;
 
-
+    [SerializeField] int sfxNumberToPlay;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -48,12 +48,19 @@ public class WeaponsSystem : MonoBehaviour
             if (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))
             {
                 Instantiate(bullet, firePoint.position, firePoint.rotation);
+                PlayWeaponSFX();
+
                 shotCounter = timeBetweenShots;
 
                 CameraShake.instance.ShakeCamera(weaponShakeIntensity, weaponShakeTime);
             }
         }
 
+    }
+
+    public void PlayWeaponSFX()
+    {
+        AudioManager.instance.PlaySFX(sfxNumberToPlay);
     }
 
     public Sprite GetWeaponImageUI() { return weaponImage; }

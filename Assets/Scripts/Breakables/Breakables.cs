@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class Breakables : MonoBehaviour
 {
     [SerializeField] GameObject[] brokenParts;
-
+    [SerializeField] int sfxNumberToPlay;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Player"))
@@ -16,6 +16,7 @@ public class Breakables : MonoBehaviour
             if(playerIsDashing)
             {
                 GetComponent<Animator>().SetTrigger("Break");
+                PlayBreakSFX();
 
                 for(int i = 0; i < brokenParts.Length; i++)
                 {
@@ -37,6 +38,13 @@ public class Breakables : MonoBehaviour
             
         }
     }
+
+    public void PlayBreakSFX()
+    {
+        AudioManager.instance.PlaySFX(sfxNumberToPlay);
+    }
+
+
 
     public void Destroy()
     {
