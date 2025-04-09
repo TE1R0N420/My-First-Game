@@ -4,25 +4,17 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
 
     [SerializeField] int currentBitcoins;
     
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
-        
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKey(KeyCode.G))
-            GetBitcoins(20);
 
-        if (Input.GetKey(KeyCode.H))
-            SpendBitcoins(10);
-    }
 
     public void GetBitcoins(int amountToGet)
     {
