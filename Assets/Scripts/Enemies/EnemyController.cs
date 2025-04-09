@@ -43,7 +43,12 @@ public class EnemyController : MonoBehaviour
     [SerializeField] bool shouldRunAway;
     [SerializeField] float runawayRange;
 
+    //enemies that wander
+    [SerializeField] bool shouldWander;
+    [SerializeField] float wanderLength, pauseLength;
 
+    private float wanderCounter, pauseCounter;
+    private Vector3 wanderDirection;
 
     void Start()
     {
@@ -52,6 +57,11 @@ public class EnemyController : MonoBehaviour
 
         enemyAnimator = GetComponentInChildren<Animator>();
         readyToShoot = true;
+
+        if (shouldWander)
+        {
+            pauseCounter = Random.Range(pauseLength * 0.75f, pauseLength * 1.25f);
+        }
     }
 
 
@@ -74,6 +84,35 @@ public class EnemyController : MonoBehaviour
             directionToMoveIn = Vector3.zero;
             isChasing = false;
         }
+
+
+        if (shouldWander)
+        {
+            if(wanderCounter > 0)
+            {
+                wanderCounter -= Time.deltaTime;
+
+                directionToMoveIn = wanderDirection;
+
+                if (wanderCounter <= 0)
+                {
+                    pauseCounter = Random.Range(pauseLength * 0.75f, pauseLength * 1.25f);
+                }
+            }
+
+            if(pauseCounter > 0)
+            {
+                pauseCounter -= Time.deltaTime;
+
+                if(pauseCounter <= 0)
+                {
+                    wanderCounter = Random.Range(wanderLength * 0.75f, wanderLength * 1.25f);
+                    wanderDirection = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0f);
+                }
+            }
+        }
+
+
 
         if(shouldRunAway && distancePlayerEnemy < runawayRange)
         {

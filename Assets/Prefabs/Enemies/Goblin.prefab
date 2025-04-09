@@ -51,16 +51,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpeed: 2.5
   enemyHealth: 100
+  shouldChasePlayer: 0
   playerChaseRange: 2.85
   playerKeepChaseRange: 9.92
   deathSplatter: {fileID: 3256309679513375924, guid: 28eee140a8545dd46924c2d0c7de5058, type: 3}
   damageEffect: {fileID: 8015567303666578383, guid: 45342369d8091774ab5a00a2213002db, type: 3}
-  isChasing: 0
   meleeAttacker: 0
   enemyProjectile: {fileID: 2315582988982352169, guid: 531492cb4aa73df46b43c439678d045d, type: 3}
   firePosition: {fileID: 2421825948632625225}
   shootingRange: 8
   timeBetweenShots: 2
+  shouldRunAway: 0
+  runawayRange: 0
+  shouldWander: 1
+  wanderLength: 2
+  pauseLength: 2
 --- !u!61 &3004821394936727715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -95,7 +100,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.03541398, y: -0.3098712}
+  m_Offset: {x: 0.14852381, y: -0.3098712}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -105,7 +110,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.8229308, y: 1.903053}
+  m_Size: {x: 1.1908064, y: 1.903053}
   m_EdgeRadius: 0
 --- !u!50 &9158788362459339220
 Rigidbody2D:
@@ -248,7 +253,7 @@ Animator:
   m_GameObject: {fileID: 8916109011487524658}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b17e4a48896dc114385c233e8a7bd1a4, type: 2}
+  m_Controller: {fileID: 9100000, guid: e1cedec6ea30c7e47a42d146b410c928, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
