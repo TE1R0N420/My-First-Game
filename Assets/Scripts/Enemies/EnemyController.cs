@@ -50,6 +50,12 @@ public class EnemyController : MonoBehaviour
     private float wanderCounter, pauseCounter;
     private Vector3 wanderDirection;
 
+
+    //enemies that patrol
+    [SerializeField] bool shouldPatrol;
+    [SerializeField] Transform[] patrolPoints;
+    private int currentPatrolPoint;
+
     void Start()
     {
         enemyRigidbody = GetComponent<Rigidbody2D>();
@@ -86,7 +92,7 @@ public class EnemyController : MonoBehaviour
         }
 
 
-        if (shouldWander)
+        if (shouldWander && !isChasing)
         {
             if(wanderCounter > 0)
             {
@@ -111,6 +117,21 @@ public class EnemyController : MonoBehaviour
                 }
             }
         }
+
+
+        if (shouldPatrol && !isChasing)
+        {
+            directionToMoveIn = patrolPoints[currentPatrolPoint].position - transform.position;
+            float distanceEnemyPoint = Vector3.Distance(transform.position, patrolPoints[currentPatrolPoint].position);
+
+            if(distanceEnemyPoint < 0.2f)
+            {
+                currentPatrolPoint++;
+                if(currentPatrolPoint >= patrolPoints.Length)
+                    currentPatrolPoint = 0;
+            }
+        }
+
 
 
 
