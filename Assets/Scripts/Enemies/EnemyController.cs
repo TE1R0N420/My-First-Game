@@ -10,6 +10,10 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] int enemyHealth = 100;
 
+
+
+    //enemies that chase the player
+    [SerializeField] bool shouldChasePlayer;
     [SerializeField] float playerChaseRange;
     [SerializeField] float playerKeepChaseRange;
 
@@ -17,7 +21,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] GameObject deathSplatter;
     [SerializeField] GameObject damageEffect;
 
-    public bool isChasing;
+    private bool isChasing;
 
     private Vector3 directionToMoveIn;
 
@@ -34,6 +38,13 @@ public class EnemyController : MonoBehaviour
     [SerializeField] float timeBetweenShots;
     private bool readyToShoot;
 
+
+    //enemies that run away
+    [SerializeField] bool shouldRunAway;
+    [SerializeField] float runawayRange;
+
+
+
     void Start()
     {
         enemyRigidbody = GetComponent<Rigidbody2D>();
@@ -46,12 +57,15 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        if (Vector3.Distance(transform.position, playerToChase.position) < playerChaseRange)
+        float distancePlayerEnemy = Vector3.Distance(transform.position, playerToChase.position);
+
+
+        if (distancePlayerEnemy < playerChaseRange && shouldChasePlayer)
         {
             directionToMoveIn = playerToChase.position - transform.position;
             isChasing = true;
         }
-        else if (Vector3.Distance(transform.position, playerToChase.position) < playerKeepChaseRange && isChasing) 
+        else if (distancePlayerEnemy < playerKeepChaseRange && isChasing && shouldChasePlayer) 
         {
             directionToMoveIn = playerToChase.position - transform.position;
         } 
@@ -60,6 +74,12 @@ public class EnemyController : MonoBehaviour
             directionToMoveIn = Vector3.zero;
             isChasing = false;
         }
+
+        if(shouldRunAway && distancePlayerEnemy < runawayRange)
+        {
+            directionToMoveIn = transform.position - playerToChase.position;
+        }
+
 
         directionToMoveIn.Normalize();
         enemyRigidbody.linearVelocity = directionToMoveIn * enemySpeed;
@@ -129,14 +149,25 @@ public class EnemyController : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, playerChaseRange);
 
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, playerKeepChaseRange);
+        if (shouldChasePlayer)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, playerChaseRange);
 
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, playerKeepChaseRange);
+        }
+        
+        
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, shootingRange);
+
+        if (shouldRunAway)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(transform.position, runawayRange);
+        }
     }
 
 
