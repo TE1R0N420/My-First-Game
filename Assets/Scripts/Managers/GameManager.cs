@@ -14,11 +14,15 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
-
+    private void Start()
+    {
+        UIManager.instance.UpdateBitcoinText(currentBitcoins);
+    }
 
     public void GetBitcoins(int amountToGet)
     {
         currentBitcoins += amountToGet;
+        UIManager.instance.UpdateBitcoinText(currentBitcoins);
     }
 
     public void SpendBitcoins(int amountToSpend)
@@ -29,5 +33,7 @@ public class GameManager : MonoBehaviour
         {
             currentBitcoins = 0;
         }
+
+        UIManager.instance.UpdateBitcoinText(currentBitcoins);
     }
 }
