@@ -36,4 +36,6 @@ public class GameManager : MonoBehaviour
 
         UIManager.instance.UpdateBitcoinText(currentBitcoins);
     }
+
+    public int GetCurrentBitcoins() { return currentBitcoins; }
 }
