@@ -163,6 +163,10 @@ MonoBehaviour:
   dropsItems: 1
   itemsToDrop:
   - {fileID: 0}
+  - {fileID: 1393086838925999130, guid: 7ff87dc805b75654a837881a40064be0, type: 3}
+  - {fileID: 2534772854689887254, guid: 41d92a0b39c74484da4518f058d6e6b7, type: 3}
+  - {fileID: 2534772854689887254, guid: 41d92a0b39c74484da4518f058d6e6b7, type: 3}
+  - {fileID: 2534772854689887254, guid: 41d92a0b39c74484da4518f058d6e6b7, type: 3}
   itemDropChance: 1
 --- !u!1 &6358121763626270827
 GameObject:
