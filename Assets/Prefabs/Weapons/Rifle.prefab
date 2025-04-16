@@ -141,3 +141,5 @@ MonoBehaviour:
   weaponShakeTime: 0
   isWeaponAutomatic: 0
   sfxNumberToPlay: 7
+  weaponPrice: 20
+  weaponShopSprite: {fileID: -896113644789240630, guid: 167e5f66d315e3746bd1a8d90bee70ff, type: 3}

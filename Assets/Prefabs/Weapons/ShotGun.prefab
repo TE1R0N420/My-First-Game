@@ -110,6 +110,8 @@ MonoBehaviour:
   weaponShakeTime: 0
   isWeaponAutomatic: 0
   sfxNumberToPlay: 9
+  weaponPrice: 30
+  weaponShopSprite: {fileID: -4056352365346963193, guid: 8868adc77218aa043a6acbb6a44d36c5, type: 3}
 --- !u!1 &8737260302947157376
 GameObject:
   m_ObjectHideFlags: 0

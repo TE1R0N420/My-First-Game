@@ -13,6 +13,27 @@ public class ShopItem : MonoBehaviour
 
     [SerializeField] int itemCost;
 
+    [SerializeField] WeaponsSystem[] thePotentialWeaponsToBuy;
+    private WeaponsSystem weaponToBuy;
+
+    [SerializeField] SpriteRenderer weaponSpriteRenderer;
+    [SerializeField] TMPro.TextMeshPro priceText;
+
+    private void Start()
+    {
+        if(itemType == ItemType.weapon)
+        {
+            int selectWeapon = Random.Range(0, thePotentialWeaponsToBuy.Length);
+            weaponToBuy = thePotentialWeaponsToBuy[selectWeapon];
+
+            itemCost = weaponToBuy.GetWeaponPrice();
+            weaponSpriteRenderer.sprite = weaponToBuy.GetWeaponShopSprite();
+
+            priceText.text = "Buy " + weaponToBuy.GetWeaponName() + ": " + itemCost + "BTC";
+        }
+    }
+
+
     private void Update()
     {
         if (inBuyZone)
@@ -31,6 +52,16 @@ public class ShopItem : MonoBehaviour
 
                         case ItemType.healthUpgrade:
                             Object.FindFirstObjectByType<PlayerHealthHandler>().IncreaseMaxHealth(10);
+                            break;
+
+                        case ItemType.weapon:
+                            PlayerController playerBuying = Object.FindFirstObjectByType<PlayerController>();
+                            WeaponsSystem weaponToAdd = Instantiate(weaponToBuy, playerBuying.GetWeaponsArm());
+                            playerBuying.AddToAvailableWeapons(weaponToAdd);
+                            break;
+
+                        default:
+                            Debug.Log("No item type was chosen");
                             break;
                     }
                 }
