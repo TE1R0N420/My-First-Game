@@ -55,23 +55,20 @@ public class LevelManager : MonoBehaviour
 
     public void PauseResumeGame()
     {
-        Debug.Log("PauseResumeGame() called");
 
         if (!gameIsPaused)
         {
-            UIManager.instance.TurnPauseMenuOnOff(true); //  Disable this line temporarily
-            Debug.Log("SKIPPED pause menu activation");
-
+            UIManager.instance.TurnPauseMenuOnOff(true); 
             gameIsPaused = true;
-            Debug.Log("Game is now paused");
+
+            Time.timeScale = 0f;
         }
         else
         {
-            UIManager.instance.TurnPauseMenuOnOff(false); //  Disable this too
-            Debug.Log("SKIPPED pause menu deactivation");
-
+            UIManager.instance.TurnPauseMenuOnOff(false); 
             gameIsPaused = false;
-            Debug.Log("Game is now resumed");
+
+            Time.timeScale = 1f;
         }
     }
 

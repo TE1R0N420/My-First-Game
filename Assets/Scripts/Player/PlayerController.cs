@@ -55,6 +55,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (LevelManager.instance.IsGamePaused()) { return; }  //to mo¿esz dodaC tez do weapon system ¿eby zatrzymaæ broñ, ale coœ siê wtedy UI pierdoli idk
+
         PlayerMoving();
         PlayerPointingGunAtMouse();
         PlayerAnimating();

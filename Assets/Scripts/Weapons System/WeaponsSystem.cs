@@ -34,6 +34,7 @@ public class WeaponsSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         FiringBullets();
     }
 
