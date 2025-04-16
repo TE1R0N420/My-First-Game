@@ -48,4 +48,17 @@ public class UIManager : MonoBehaviour
     {
         btcText.text = amountOfBTC.ToString();
     }
+
+
+    public void RestartLevel()
+    {
+        LevelManager.instance.RestartLevel();
+    }
+
+    public void ReturnToMainMenu()
+    {
+        LevelManager.instance.ReturnToMainMenu();
+    }
+
+   
 }

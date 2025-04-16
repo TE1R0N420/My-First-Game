@@ -14,7 +14,7 @@ public class LevelManager : MonoBehaviour
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         instance = this;
     }
@@ -30,6 +30,16 @@ public class LevelManager : MonoBehaviour
         Time.timeScale = 1f;
 
         SceneManager.LoadScene(nextLevel);
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
     
 }
