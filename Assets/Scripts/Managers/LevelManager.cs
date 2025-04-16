@@ -10,13 +10,24 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] float timeToLoad = 2f;
 
+    private bool gameIsPaused;
 
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
+    
+    void Start()
     {
         instance = this;
+    }
+
+
+    private void Update()
+    {
+        Debug.Log("Update running: paused = " + gameIsPaused);
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            PauseResumeGame();
+        }
     }
 
     public IEnumerator LoadingNextLevel(string nextLevel)
@@ -41,5 +52,31 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void PauseResumeGame()
+    {
+        Debug.Log("PauseResumeGame() called");
+
+        if (!gameIsPaused)
+        {
+            UIManager.instance.TurnPauseMenuOnOff(true); //  Disable this line temporarily
+            Debug.Log("SKIPPED pause menu activation");
+
+            gameIsPaused = true;
+            Debug.Log("Game is now paused");
+        }
+        else
+        {
+            UIManager.instance.TurnPauseMenuOnOff(false); //  Disable this too
+            Debug.Log("SKIPPED pause menu deactivation");
+
+            gameIsPaused = false;
+            Debug.Log("Game is now resumed");
+        }
+    }
+
+
+
+    public bool IsGamePaused() { return gameIsPaused; }
     
 }

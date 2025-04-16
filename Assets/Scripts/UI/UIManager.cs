@@ -21,6 +21,8 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI btcText;
 
+    [SerializeField] GameObject pauseMenu;
+
 
     private void Awake()
     {
@@ -60,5 +62,10 @@ public class UIManager : MonoBehaviour
         LevelManager.instance.ReturnToMainMenu();
     }
 
+
+    public void TurnPauseMenuOnOff(bool onOff)
+    {
+        pauseMenu.SetActive(onOff);
+    }
    
 }
