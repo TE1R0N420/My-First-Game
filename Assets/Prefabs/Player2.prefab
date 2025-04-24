@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  maxHealth: 100
+  maxHealth: 200
   invincibilityTime: 1
   playerSprite: {fileID: 1678345691883143570}
 --- !u!1 &976561451081875263
@@ -605,6 +605,10 @@ PrefabInstance:
     - target: {fileID: 3970650253140373195, guid: 6a8fb1353495b954bbb74b20949a82a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888856697357009541, guid: 6a8fb1353495b954bbb74b20949a82a3, type: 3}
+      propertyPath: sfxNumberToPlay
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6922072138282625163, guid: 6a8fb1353495b954bbb74b20949a82a3, type: 3}
       propertyPath: m_Name
