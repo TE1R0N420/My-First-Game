@@ -11,6 +11,9 @@ public class BossController : MonoBehaviour
 
     [SerializeField] float attackRadius;
     [SerializeField] LayerMask whatIsPlayer;
+
+    [SerializeField] int angryDamageAmount = 40;
+    [SerializeField] float angryAttackRadius;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,7 +39,7 @@ public class BossController : MonoBehaviour
     public void AttackPlayer()
     {
         Collider2D playerToAttack = Physics2D.OverlapCircle(pointOfAttack.position, attackRadius, whatIsPlayer);
-        print(playerToAttack);
+       
 
         if(playerToAttack != null)
         {
@@ -44,6 +47,17 @@ public class BossController : MonoBehaviour
         }
     }
 
+
+    public void AngryAttackPlayer()
+    {
+        Collider2D playerToAttack = Physics2D.OverlapCircle(pointOfAttack.position, angryAttackRadius, whatIsPlayer);
+        
+
+        if (playerToAttack != null)
+        {
+            playerToAttack.GetComponent<PlayerHealthHandler>().DamagePlayer(angryDamageAmount);
+        }
+    }
 
     private void OnDrawGizmosSelected()
     {
