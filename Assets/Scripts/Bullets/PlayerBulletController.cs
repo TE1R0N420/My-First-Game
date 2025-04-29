@@ -31,11 +31,16 @@ public class PlayerBulletController : MonoBehaviour
 
         if (collision.CompareTag("Enemy"))
         {
-            int selectedSplatter = Random.Range(0, damageEffects.Length);
-            Instantiate(damageEffects[selectedSplatter], transform.position, transform.rotation);
+            InstantiateBloodEffect();
 
             collision.GetComponent<EnemyController>().DamageEnemy(damageAmount);
 
+        }
+        else if (collision.CompareTag("Boss"))
+        {
+            InstantiateBloodEffect();
+
+            collision.GetComponent<BossHealthHandler>().TakeDamage(damageAmount);
         }
         else
         {
@@ -43,5 +48,11 @@ public class PlayerBulletController : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    private void InstantiateBloodEffect()
+    {
+        int selectedSplatter = Random.Range(0, damageEffects.Length);
+        Instantiate(damageEffects[selectedSplatter], transform.position, transform.rotation);
     }
 }
