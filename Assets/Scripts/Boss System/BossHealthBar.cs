@@ -11,13 +11,13 @@ public class BossHealthBar : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        bossHealthSlider.maxValue = Object.FindFirstObjectByType<BossHealthHandler>().GetBossMaxHealth();
+        bossHealthSlider.maxValue = Object.FindAnyObjectByType<BossHealthHandler>().GetBossMaxHealth();
     }
 
     // Update is called once per frame
     void Update()
     {
-        bossHealthSlider.value = Object.FindFirstObjectByType<BossHealthHandler>().GetBossCurrentHealth();
+        bossHealthSlider.value = Object.FindAnyObjectByType<BossHealthHandler>().GetBossCurrentHealth();
 
         if(bossHealthSlider.value <= 0)
         {

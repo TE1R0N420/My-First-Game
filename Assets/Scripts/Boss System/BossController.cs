@@ -14,6 +14,11 @@ public class BossController : MonoBehaviour
 
     [SerializeField] int angryDamageAmount = 40;
     [SerializeField] float angryAttackRadius;
+
+    [SerializeField] Transform[] shootingPoints;
+    [SerializeField] Transform[] angryShootingPoints;
+
+    [SerializeField] GameObject bossBullet;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -58,6 +63,23 @@ public class BossController : MonoBehaviour
             playerToAttack.GetComponent<PlayerHealthHandler>().DamagePlayer(angryDamageAmount);
         }
     }
+
+    public void ShootingPlayer()
+    {
+        foreach(Transform point in shootingPoints)
+        {
+            Instantiate(bossBullet, point.position, point.rotation);
+        }
+    }
+
+    public void AngryShootingPlayer()
+    {
+        foreach (Transform point in angryShootingPoints)
+        {
+            Instantiate(bossBullet, point.position, point.rotation);
+        }
+    }
+
 
     private void OnDrawGizmosSelected()
     {
