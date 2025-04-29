@@ -8,7 +8,8 @@ public class BossHealthHandler : MonoBehaviour
     [SerializeField] int bossMaxHealth = 500;
     public int bossCurrentHealth;
     
-    
+    private bool isInvincible = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,6 +18,8 @@ public class BossHealthHandler : MonoBehaviour
 
     public void TakeDamage(int amountOfDamage)
     {
+        if(isInvincible) { return; }
+        
         bossCurrentHealth -= amountOfDamage;
 
         if(bossCurrentHealth <= bossMaxHealth / 2)
@@ -35,4 +38,11 @@ public class BossHealthHandler : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public int GetBossMaxHealth() { return bossMaxHealth; }
+
+    public int GetBossCurrentHealth() { return bossCurrentHealth; }
+
+
+    public void SetTheBossInvincible(bool isBossInvincible) { isInvincible = isBossInvincible; }
 }
