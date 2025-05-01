@@ -9,14 +9,29 @@ EditorBuildSettings:
     path: Assets/Scenes/Title Screen.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/Level 2.unity
+    path: Assets/Scenes/Boss Room.unity
     guid: 8000eece61c77f64ebdc6dc25cc0ecb9
   - enabled: 1
-    path: Assets/Scenes/Test 3.unity
+    path: Assets/Scenes/Enemies Room.unity
     guid: 2bbfd9ed080e5da4b95578e3a5241c99
   - enabled: 1
     path: Assets/Scenes/Victory Screen.unity
     guid: 8e8216ed39c630247ba270a1717e7782
+  - enabled: 1
+    path: Assets/Scenes/New Weapons Room.unity
+    guid: fedb532ebec471c45bc1bd4b292d13c2
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 89b9e24d256156648a852a78ab538812
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: 9586d7db0291b1541ab26c66f6b08cdc
+  - enabled: 1
+    path: Assets/Scenes/Spike Room.unity
+    guid: 86931642a70599c43b1a74e154aa5de9
+  - enabled: 1
+    path: Assets/Scenes/Health Room.unity
+    guid: b408d96b63fd5fe4b9223c1787956866
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
