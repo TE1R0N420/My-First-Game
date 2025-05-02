@@ -13,6 +13,8 @@ public class WaveSpawner : MonoBehaviour
 
     private enum SpawningStates { Spawning, Waiting, Counting }
     private SpawningStates state;
+
+    private float timeBetweenEnemySearch = 1f;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,11 +26,24 @@ public class WaveSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(state == SpawningStates.Waiting)
+        {
+            if (!EnemiesAreAlive())
+            {
+                Debug.Log("Wave Complete");
+            }
+            else
+            {
+                return;
+            }
+        }
+        
+        
         if(waveCountdown <= 0)
         {
             if(state != SpawningStates.Spawning)
             {
-                // start spawning
+                StartCoroutine(SpawnWave(waves[nextWave]));
             }
         }
         else
@@ -36,6 +51,49 @@ public class WaveSpawner : MonoBehaviour
             waveCountdown -= Time.deltaTime;
         }
     }
+
+    IEnumerator SpawnWave(Wave waveToSpawn)
+    {
+        state = SpawningStates.Spawning;
+        
+        for(int i = 0; i < waveToSpawn.amountOfEnemies; i++)
+        {
+            int randomEnemyNumber = Random.Range(0, waveToSpawn.enemies.Length);
+            SpawnEnemy(waveToSpawn.enemies[randomEnemyNumber]);
+
+            yield return new WaitForSeconds(waveToSpawn.spawnDelay);
+        }
+
+        state = SpawningStates.Waiting;
+    }
+
+    void SpawnEnemy(GameObject enemyToSpawn)
+    {
+        Debug.Log("Spawning The Enemy: " + enemyToSpawn);
+        Instantiate(enemyToSpawn, transform.position, transform.rotation);
+    }
+
+
+    private bool EnemiesAreAlive()
+    {
+        timeBetweenEnemySearch -= Time.deltaTime;
+
+        if(timeBetweenEnemySearch <= 0)
+        {
+            timeBetweenEnemySearch = 1f; 
+            
+            if (FindObjectsByType<EnemyController>(FindObjectsSortMode.None).Length == 0)
+             {
+                return false;
+             }
+        }
+        
+       
+        return true;
+    }
+
+
+
 }
 
 
