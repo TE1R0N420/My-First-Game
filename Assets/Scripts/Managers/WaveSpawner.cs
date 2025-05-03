@@ -15,6 +15,8 @@ public class WaveSpawner : MonoBehaviour
     private SpawningStates state;
 
     private float timeBetweenEnemySearch = 1f;
+
+    [SerializeField] Transform[] spawnPoints;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,6 +33,7 @@ public class WaveSpawner : MonoBehaviour
             if (!EnemiesAreAlive())
             {
                 Debug.Log("Wave Complete");
+                StartNewWave();
             }
             else
             {
@@ -69,8 +72,9 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy(GameObject enemyToSpawn)
     {
-        Debug.Log("Spawning The Enemy: " + enemyToSpawn);
-        Instantiate(enemyToSpawn, transform.position, transform.rotation);
+        Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+
+        Instantiate(enemyToSpawn, spawnPoint.position, spawnPoint.rotation);
     }
 
 
@@ -91,6 +95,23 @@ public class WaveSpawner : MonoBehaviour
        
         return true;
     }
+
+    void StartNewWave()
+    {
+        state = SpawningStates.Counting;
+
+        waveCountdown = timeBetweenWaves;
+
+        if(nextWave + 1 == waves.Length)
+        {
+            Debug.Log("We've completed all the waves");
+        }
+        else
+        {
+            nextWave++;
+        }
+    }
+
 
 
 

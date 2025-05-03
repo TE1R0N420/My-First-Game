@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 6
   bulletImpactEffect: {fileID: 1884877179066922329, guid: 7bd94f2b4a0ff95428ca708ed0ade78e, type: 3}
-  damageAmount: 6
+  damageAmount: 15
   damageEffects:
   - {fileID: 8015567303666578383, guid: 45342369d8091774ab5a00a2213002db, type: 3}
   - {fileID: 4887812215794382449, guid: 60f4f7a8eb020a34eb4da85c7ebc989d, type: 3}
