@@ -32,13 +32,13 @@ public class RoomManager : MonoBehaviour
             }
         }
 
-        if(enemies.Count == 0)
+        /*if(enemies.Count == 0)
         {
             for(int i = 0; i < doorsToClose.Length; i++)
             {
                 doorsToClose[i].SetActive(false);
             }
-        }
+        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

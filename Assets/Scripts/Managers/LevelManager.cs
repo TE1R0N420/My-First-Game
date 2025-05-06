@@ -57,12 +57,16 @@ public class LevelManager : MonoBehaviour
             levelToGoTo_1 = rand;
         }
 
+        levelExit_1.PrintRoomName(levelToGoTo_1);
+
         while (levelToGoTo_2 == levelToGoTo_1 || levelToGoTo_2 == SceneManager.GetActiveScene().buildIndex)
         {
             int rand = Random.Range(1, SceneManager.sceneCountInBuildSettings - 1);
             print("The random number2 is: " + rand);
             levelToGoTo_2 = rand;
         }
+
+        levelExit_2.PrintRoomName(levelToGoTo_2);
     }
 
 
