@@ -17,7 +17,7 @@ public class ShopItem : MonoBehaviour
     private WeaponsSystem weaponToBuy;
 
     [SerializeField] SpriteRenderer weaponSpriteRenderer;
-    [SerializeField] TMPro.TextMeshPro priceText;
+    [SerializeField] TMPro.TextMeshProUGUI priceText;
 
     private void Start()
     {
