@@ -24,11 +24,20 @@ public class NameAppear : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && inOpenDoorZone)
         {
-            doorToOpen.SetActive(false);
+            Collider2D col = doorToOpen.GetComponent<Collider2D>();
+            if (col) col.enabled = false;
+
+            SpriteRenderer sr = doorToOpen.GetComponent<SpriteRenderer>();
+            if (sr) sr.enabled = false;
         }
     }
-        
-    
+
+
+
+
+
+
+
 
     public void SetTheLevelName(string lvlName)
     {

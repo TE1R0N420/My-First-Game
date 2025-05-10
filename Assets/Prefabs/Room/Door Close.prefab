@@ -437,7 +437,6 @@ MonoBehaviour:
   levelNameUI: {fileID: 4892995884439420403}
   levelNameCanvas: {fileID: 2158898590628524216}
   doorToOpen: {fileID: 5624534652473959578}
-  inOpenDoorZone: 0
 --- !u!1 &7620369558856378059
 GameObject:
   m_ObjectHideFlags: 0
