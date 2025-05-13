@@ -374,7 +374,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   potentialWeapons:
-  - {fileID: 9048133640404810517, guid: 8869b4dcf76802c4db19f74aff3009f1, type: 3}
   - {fileID: 7387578650254265295, guid: d7d58de0e8db2c24ab4be9f3c6949542, type: 3}
   - {fileID: 247598455222805627, guid: 9d8f45cedfaa76e4cbd315c449804eac, type: 3}
   openChestSprite: {fileID: -7494595208423696761, guid: 2f03b71ff51ca0545bc233a027b90e9b, type: 3}

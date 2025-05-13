@@ -30,6 +30,24 @@ public class PlayerController : MonoBehaviour
     private int currentGun;
 
 
+    public static PlayerController instance;
+
+    private void Awake()
+    {
+        
+        if(instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+
+
+        DontDestroyOnLoad(this);
+    }
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -154,6 +172,10 @@ public class PlayerController : MonoBehaviour
 
     private void PlayerPointingGunAtMouse()
     {
+        if(mainCamera == null)
+            mainCamera = Camera.main;
+        
+        
         Vector3 mousePosition = Input.mousePosition;
         Vector3 screenPoint = mainCamera.WorldToScreenPoint(transform.localPosition);
 

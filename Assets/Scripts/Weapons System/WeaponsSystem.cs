@@ -56,7 +56,11 @@ public class WeaponsSystem : MonoBehaviour
 
                 shotCounter = timeBetweenShots;
 
-                CameraShake.instance.ShakeCamera(weaponShakeIntensity, weaponShakeTime);
+                if (CameraShake.instance != null)
+                {
+                    CameraShake.instance.ShakeCamera(weaponShakeIntensity, weaponShakeTime);
+                }
+
             }
         }
 
