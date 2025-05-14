@@ -192,7 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpeed: 2.5
   enemyHealth: 100
-  shouldChasePlayer: 0
+  shouldChasePlayer: 1
   playerChaseRange: 2.85
   playerKeepChaseRange: 9.92
   deathSplatter: {fileID: 3256309679513375924, guid: 28eee140a8545dd46924c2d0c7de5058, type: 3}
