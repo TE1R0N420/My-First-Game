@@ -14,10 +14,15 @@ public class LevelManager : MonoBehaviour
 
     public int levelToGoTo_1, levelToGoTo_2;
     public LevelExit levelExit_1, levelExit_2;
-    
+
+    [SerializeField] Transform spawnPoint;
+
+
     void Start()
     {
         instance = this;
+
+        PutPlayerInPoint();
     }
 
 
@@ -97,6 +102,11 @@ public class LevelManager : MonoBehaviour
 
             Time.timeScale = 1f;
         }
+    }
+
+    public void PutPlayerInPoint()
+    {
+        PlayerController.instance.transform.position = spawnPoint.position;
     }
 
 

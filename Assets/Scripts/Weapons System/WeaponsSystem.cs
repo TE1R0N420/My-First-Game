@@ -68,7 +68,13 @@ public class WeaponsSystem : MonoBehaviour
 
     public void PlayWeaponSFX()
     {
-        AudioManager.instance.PlaySFX(sfxNumberToPlay);
+        if (AudioManager.instance != null)
+        {
+            AudioManager.instance.PlaySFX(sfxNumberToPlay);
+        }
+
+
+        
     }
 
     public Sprite GetWeaponImageUI() { return weaponImage; }

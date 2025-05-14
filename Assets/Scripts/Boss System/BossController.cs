@@ -29,17 +29,31 @@ public class BossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.x > playerToChase.position.x && isFlipped)
+        if (playerToChase == null)
+        {
+            PlayerController foundPlayer = FindFirstObjectByType<PlayerController>();
+            if (foundPlayer != null)
+            {
+                playerToChase = foundPlayer.transform;
+            }
+            else
+            {
+                return; // No player found, skip this frame
+            }
+        }
+
+        if (transform.position.x > playerToChase.position.x && isFlipped)
         {
             transform.Rotate(0f, 180f, 0f);
             isFlipped = false;
         }
-        else if(transform.position.x < playerToChase.position.x && !isFlipped)
+        else if (transform.position.x < playerToChase.position.x && !isFlipped)
         {
             transform.Rotate(0f, 180f, 0f);
             isFlipped = true;
         }
     }
+
 
     public void AttackPlayer()
     {
@@ -83,6 +97,8 @@ public class BossController : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        if (Camera.current == null) return;
+
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(pointOfAttack.position, attackRadius);
     }

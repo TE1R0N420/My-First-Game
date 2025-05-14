@@ -173,26 +173,29 @@ public class PlayerController : MonoBehaviour
 
     private void PlayerPointingGunAtMouse()
     {
-        if(mainCamera == null)
+        if (mainCamera == null)
             mainCamera = Camera.main;
-        
-        
+
+        if (mainCamera == null)
+            return; // Still no camera? Exit safely.
+
         Vector3 mousePosition = Input.mousePosition;
-        Vector3 screenPoint = mainCamera.WorldToScreenPoint(transform.localPosition);
+        Vector3 screenPoint = mainCamera.WorldToScreenPoint(transform.position);
+
+        // If player is behind the camera, don't aim or flip
+        if (screenPoint.z < 0f)
+            return;
 
         Vector2 offset = new Vector2(mousePosition.x - screenPoint.x, mousePosition.y - screenPoint.y);
         float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
 
-
         weaponsArm.rotation = Quaternion.Euler(0, 0, angle);
-
 
         if (mousePosition.x < screenPoint.x)
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
             weaponsArm.localScale = new Vector3(-1f, -1f, 1f);
         }
-
         else
         {
             transform.localScale = Vector3.one;
@@ -200,7 +203,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    
+
+
 
     private void PlayerMoving()
     {

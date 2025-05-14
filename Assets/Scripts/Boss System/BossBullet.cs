@@ -20,11 +20,13 @@ public class BossBullet : MonoBehaviour
     {
         transform.position += bulletDirection * speed * Time.deltaTime;
 
-        if (!FindFirstObjectByType<BossController>().gameObject.activeInHierarchy)
+        var boss = FindFirstObjectByType<BossController>();
+        if (boss == null || !boss.gameObject.activeInHierarchy)
         {
             Destroy(gameObject);
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

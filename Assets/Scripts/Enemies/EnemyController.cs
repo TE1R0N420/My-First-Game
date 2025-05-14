@@ -73,6 +73,12 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
+        
+        while(playerToChase == null)
+        {
+            playerToChase = FindFirstObjectByType<PlayerController>().transform;
+        }
+        
         float distancePlayerEnemy = Vector3.Distance(transform.position, playerToChase.position);
 
 

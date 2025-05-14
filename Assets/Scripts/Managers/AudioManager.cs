@@ -16,8 +16,16 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         instance = this;
+        DontDestroyOnLoad(gameObject);
     }
+
 
 
 
@@ -53,14 +61,40 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySFX(int sfxNumber)
     {
-        //AudioSource.PlayClipAtPoint(SFX[sfxNumber], Camera.main.transform.position);
+        if (sfxNumber < 0 || sfxNumber >= SFX.Length || SFX[sfxNumber] == null)
+        {
+            Debug.LogWarning("SFX number out of range or null.");
+            return;
+        }
+
+        if (Camera.main == null)
+        {
+            Debug.LogWarning("No main camera available for SFX instantiation.");
+            return;
+        }
+
+        if (this == null)
+        {
+            Debug.LogWarning("AudioManager instance is destroyed.");
+            return;
+        }
 
         theSFX = Instantiate(SFX[sfxNumber], Camera.main.transform);
         Invoke("DestroySfxGameObject", theSFX.GetComponent<AudioSource>().clip.length);
     }
 
+
     private void DestroySfxGameObject()
     {
         Destroy(theSFX);
     }
+
+    private void OnDestroy()
+    {
+        if (instance == this)
+        {
+            instance = null;
+        }
+    }
+
 }

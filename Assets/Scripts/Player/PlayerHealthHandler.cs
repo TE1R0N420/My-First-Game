@@ -119,5 +119,7 @@ public class PlayerHealthHandler : MonoBehaviour
         UIManager.instance.healthSlider.value = currentHealth;
     }
 
+    public int GetPlayerMaxHealth() { return maxHealth; }
 
+    public int GetPlayerCurrentHealth() { return currentHealth; }
 }

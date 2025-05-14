@@ -38,6 +38,8 @@ public class UIManager : MonoBehaviour
         {
             bossMenu.SetActive(true);
         }
+
+        StartCoroutine(UpdatePlayerUI());
     }
 
     public void FadeImage()
@@ -76,6 +78,25 @@ public class UIManager : MonoBehaviour
     public void TurnPauseMenuOnOff(bool onOff)
     {
         pauseMenu.SetActive(onOff);
+    }
+
+    public IEnumerator UpdatePlayerUI()
+    {
+        yield return new WaitForSeconds(0.1f);
+        
+        PlayerHealthHandler playerHealth = null;
+
+        while(playerHealth == null)
+        {
+            playerHealth = FindFirstObjectByType<PlayerHealthHandler>();
+        }
+
+        healthSlider.maxValue = playerHealth.GetPlayerMaxHealth();
+        healthSlider.value = playerHealth.GetPlayerCurrentHealth();
+
+        healthText.text = playerHealth.GetPlayerCurrentHealth() + "/" + playerHealth.GetPlayerMaxHealth();
+        btcText.text = GameManager.instance.GetCurrentBitcoins().ToString();
+    
     }
    
 }

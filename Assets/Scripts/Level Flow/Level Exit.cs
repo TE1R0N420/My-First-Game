@@ -9,7 +9,7 @@ public class LevelExit : MonoBehaviour
 
     private void Start()
     {
-       
+       PrintRoomName(LevelToLoad);
     }
 
     public void PrintRoomName(int levelIndex)
